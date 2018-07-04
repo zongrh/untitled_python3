@@ -200,6 +200,105 @@ a = 10
 b = 20
 list = [1, 2, 3, 4, 5]
 if (a in list):
-    print("list in a")
+    print("list 在 a")
 else:
-    print("list not in a ")
+    print("list 不在 a ")
+
+if (b not in list):
+    print("a 不在 list ")
+else:
+    print("a 在 list ")
+# 修改变量 a的值
+a = 2
+if (a in list):
+    print("a 在list ")
+else:
+    print("a 不在list")
+print("-----------------------------")
+"""
+Python身份运算符
+身份运算符用于比较两个对象的存储单元
+运算符	描述	实例
+is   	is 是判断两个标识符是不是引用自一个对象	x is y, 类似 id(x) == id(y) , 如果引用的是同一个对象则返回 True，否则返回 False
+is not   	is not 是判断两个标识符是不是引用自不同对象	x is not y ， 类似 id(a) != id(b)。如果引用的不是同一个对象则返回结果 True，否则返回 False。
+"""
+"""
+is 与 == 区别：
+is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。
+is not与!=区别于上述一致，一个比较的是引用对象，另一个比较的是两者的值。
+"""
+
+a = 20
+b = 20
+print("a=", a, "b=", b)
+if (a is b):
+    print("is----ab有相同标识")
+else:
+    print("is----ab没有相同标识")
+
+if (id(a) == id(b)):
+    print("id(a) == id(b)----ab有相同标识")
+else:
+    print("id(a) == id(b)----ab没有相同标识")
+# 修改变量b的值
+b = 30
+if (a is b):
+    print("is----ab有相同标识")
+else:
+    print("is----ab没有相同标识")
+
+if (a is not b):
+    print("is not----ab 没有相同标识")
+else:
+    print("is not----ab有相同标识")
+"""
+is 和 ==
+is 判断两个变量是否是引用同一个内存地址。
+== 判断两个变量是否相等。
+如果不用 a = b 赋值，int 型时，在数值为 -5~256（64位系统）时，两个变量引用的是同一个内存地址，其他的数值就不是同一个内存地址了。
+也就是，a b 在 -5~256（64位系统）时：
+a = 100
+b = 100
+a is b # 返回 True
+其他类型如列表、元祖、字典让 a、b 分别赋值一样的时：
+a is b  # 返回False
+"""
+a = 100
+b = 100
+if (a is b):
+    print("a=============b")
+
+print("-----------------------------")
+"""
+Python运算符优先级
+以下表格列出了从最高到最低优先级的所有运算符：
+
+运算符	描述
+**	指数 (最高优先级)
+~ + -	按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)
+* / % //	乘，除，取模和取整除
++ -	加法减法
+>> <<	右移，左移运算符
+&	位 'AND'
+^ |	位运算符
+<= < > >=	比较运算符
+<> == !=	等于运算符
+= %= /= //= -= += *= **=	赋值运算符
+is is not	身份运算符
+in not in	成员运算符
+and or not	逻辑运算符
+"""
+a = 20
+b = 10
+c = 15
+d = 5
+e = 0
+print("a=", a, "b=", b, "c=", c, "d=", d, "e=", e)
+e = (a + b) * c / d  # ( 30 * 15 ) / 5
+print("(a + b) * c / d=", e)
+e = ((a + b) * c) / d  # ( 30 * 15) /5
+print("((a + b) * c) / d=", e)
+e = (a + b) * (c / d)  # （30）*（15/5）
+print("(a + b) * (c / d)=", e)
+e = a + (b * c) / d  # 20+(150/5)
+print("a + (b * c) / d=", e)
