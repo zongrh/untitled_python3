@@ -11,13 +11,13 @@ while 判断条件：
     语句
 """
 n = 100
-sum = 0
+sum1 = 0
 counter = 1
 while counter <= n:
-    sum = sum + counter
+    sum1 = sum1 + counter
     counter += 1
-    print(sum)
-print("1到%d之和为：%d" % (n, sum))
+    print(sum1)
+print("1到%d之和为：%d" % (n, sum1))
 print("---------------------------------------------")
 # var = 1
 # while var == 1:
@@ -146,3 +146,117 @@ for letter in "runoob":
         print("执行 pass 块")
     print("当前字母：", letter)
 print("good bye")
+print("--------------------------------------TEST")
+"""
+使用内置 enumerate 函数进行遍历:
+  index 下标  item
+for index, item in enumerate(sequence):
+    process(index, item)
+"""
+sequence = [12, 34, 34, 12, 23, 45, 76, 89]
+for i, j in enumerate(sequence):
+    print(i, j)
+print("--------------------------------------TEST2")
+"""
+for 循环 1-100 所有整数的和
+"""
+n = 0
+sum1 = 0
+for n in range(0, 101):  # n 范围0-100
+    sum1 += n
+    print(n, "----,", sum1)
+print(sum1)
+print("goood bye")
+print("--------------------------------------TEST3")
+"""
+使用循环嵌套来实现99乘法法则:
+"""
+# 外边一层是循环控制行数
+# i 是行数
+i = 1
+while i <= 9:
+    # 里边一层循环控制每行中的列数
+    j = 1
+    while j <= i:
+        mut = j * i
+        print("%d*%d=%d" % (j, i, mut), end=" ")
+        j += 1
+    print("")
+    i += 1
+print("good bye ")
+print("--------------------------------------TEST4")
+"""
+for 循环的嵌套使用实例：
+"""
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print("*", end="")
+    print("\r")
+print("good bye")
+print("--------------------------------------TEST5")
+"""
+1-100 的和:
+"""
+i = 0
+i = sum(range(50, 101))
+print(sum(range(50, 101)))
+print("--------------------------------------TEST6")
+"""
+while 循环语句和 for 循环语句使用 else 的区别：
+1、如果 else 语句和 while 循环语句一起使用，则当条件变为 False 时，则执行 else 语句。
+2、如果 else 语句和 for 循环语句一起使用，else 语句块只在 for 循环正常终止时执行！
+"""
+print("--------------------------------------TEST7")
+"""
+关于pass的作用：
+pass只是为了防止语法错误。
+if a>1:
+    pass #如果没有内容，可以先写pass，但是如果不写pass，就会语法错误
+pass就是一条空语句。在代码段中或定义函数的时候，
+如果没有内容，或者先不做任何处理，直接跳过，就可以使用pass。
+"""
+print("--------------------------------------TEST8")
+"""
+冒泡排序，python 版本
+解析：很经典的排序方式，从数组中的第0个元素开始，与后面一个元素进行比较，
+如果前面的元素大于后面的元素，就调换位置，循环到最后
+（即：a0与a1比较得到结果后，a1与a2比较...），最大的元素被换到数组最末尾，
+剔除掉最后一个元素，在余下的数组元素中进行上述操作，到最后，整个数组呈现从小到大的排序
+"""
+
+
+def paixu(li):
+    max = 0
+    for ad in range(len(li) - 1):
+        for x in range(len(li) - 1 - ad):
+            if li[x] > li[x + 1]:
+                max = li[x]
+                li[x] = li[x + 1]
+                li[x + 1] = max
+            else:
+                max = li[x + 1]
+    print(li)
+
+
+paixu([41, 23334, 45446, 99000, 8200, 78, 56, 552, 1])
+print("--------------------------------------")
+
+
+def paixu(li):
+    max = 0
+    print("len(li):", len(li))
+    for ad in range(len(li) - 1):
+        # print("ad:", ad)
+        # print("len(li)-1-ad:", len(li) - 1 - ad)
+        for x in range(len(li) - 1 - ad):
+            print("x", li[x], "------", li[x + 1])
+            if li[x] > li[x + 1]:
+                max = li[x]
+                li[x] = li[x + 1]
+                li[x + 1] = max
+            else:
+                max = li[x + 1]
+    print(li)
+
+
+paixu([41, 23344, 9353, 5554, 44, 7557, 6434, 500, 2000])
