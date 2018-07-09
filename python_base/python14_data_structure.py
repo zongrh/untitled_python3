@@ -181,5 +181,6 @@ a = set("fdfdsfetghrhtrjhs")
 b = set("dfewghtrhyjkifdfsre")
 print(a)  # 去掉重复的元素
 print(b)  # 去掉重复的元素
-
-
+print(b - a)  # 在a中的字母，但不在b中
+print(a | b)  # 在a 或b 中的字母
+print(a & b)  # a b中都有的字母
