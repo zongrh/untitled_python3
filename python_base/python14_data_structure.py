@@ -177,10 +177,91 @@ basket = {"apple", "orange", "apple", "pear", "orange", "banana"}
 print(basket)  # 删除重复的
 print("orange" in basket)  # 检测成员
 
-a = set("fdfdsfetghrhtrjhs")
-b = set("dfewghtrhyjkifdfsre")
+a = set("fdjhs")
+b = set("dfe")
 print(a)  # 去掉重复的元素
 print(b)  # 去掉重复的元素
 print(b - a)  # 在a中的字母，但不在b中
 print(a | b)  # 在a 或b 中的字母
 print(a & b)  # a b中都有的字母
+print(a ^ b)  # 在ab中的字母，但不同时在a和b中
+# 集合也支持推导式
+e = {x for x in "adafdgxgfgh" if x not in "abc"}
+print(e)
+print("---------------------")
+"""
+字典
+另一个非常有用的 Python 内建数据类型是字典。
+序列是以连续的整数为索引，与此不同的是，字典以关键字为索引，关键字可以是任意不可变类型，通常用字符串或数值。
+理解字典的最佳方式是把它看做无序的键=>值对集合。在同一个字典之内，关键字必须是互不相同。
+一对大括号创建一个空的字典：{}。
+"""
+# 这是一个字典运用的简单例子：
+tel = {"jack": 4098, "sape": 4139}
+print(tel)
+tel["guolin"] = 4122
+tel["zhang"] = 1111
+print(tel)
+print(tel["jack"])
+del tel["sape"]
+print(tel)
+print(tel["zhang"])
+print("guolin" in tel)
+print("guolin" not in tel)
+print(list(tel.keys()))
+print(list(tel.values()))
+# 构造函数 dict() 直接从键值对元组列表中构建字典。如果有固定的模式，列表推导式指定特定的键值对：
+dect = ([("sape", 4139), ("guolin", 4127), ("zhang", 1111)])
+print(dect)
+# 此外，字典推导可以用来创建任意键和值的表达式词典：
+print({x: x ** 2 for x in (2, 4, 6)})
+"""
+遍历技巧
+在字典中遍历时，关键字和对应的值可以使用 items() 方法同时解读出来：
+"""
+knights = {"gallahad": "the pure", "robin": "the brave"}
+for k, v in knights.items():
+    print(k, v)
+"""
+在序列中遍历时，索引位置和对应值可以使用 enumerate() 函数同时得到：
+"""
+for i, v in enumerate(["tic", "tac", "top"]):
+    print(i, v)
+print("------------------")
+"""
+同时遍历两个或更多的序列，可以使用 zip() 组合：
+"""
+questions = ["name", "quest", "favorite color"]
+answers = ["lancelot", "the holy grail", "blue"]
+for q, a in zip(questions, answers):
+    print(q, a)
+"""
+要反向遍历一个序列，首先指定这个序列，然后调用 reversed() 函数：
+"""
+for i in reversed(range(1, 10, 2)):
+    print(i)
+print("---------------------------------------------------TEST")
+# 元组不可变，若元组的成员可变类型，则成员可编辑。
+a = [1, 2, 3, 4]
+b = [5, 6, 7, 8]
+c = [9, 10, 11, 12]
+t = a, b, c
+print(t)
+del b[1:4]
+print(t)
+
+print("---------------------------------------------------TEST")
+# 列表推导式的执行顺序：
+# 各语句之间是嵌套关系，
+# 左边第二个语句是最外层，
+# 依次往右进一层，
+# 左边#第一条语句是最后一层。
+# print([x * y for x in range[1:5] if x > 2 for y in range[1:4] if x < 3])
+
+print("---------------------------------------------------TEST")
+# 有多个列表需要遍历时，需要zip，除了用'{0}{1}'.format(q,a)的方法，还可以使用%s方法（两者效果一样一样的）：
+questions=['name','quest','favorite color']
+answers=['qinshihuang','the holy','blue']
+for q,a in zip(questions,answers):
+    print('what is your %s? it is %s' %(q,a))
+    print('what is your {0}? it is {1}'.format(q,a))
