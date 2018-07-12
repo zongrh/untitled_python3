@@ -1,0 +1,35 @@
+Python3 实例
+以下实例在 Python3.4.3 版本下测试通过：
+
+1、Python Hello World 实例
+2、Python 数字求和
+3、Python 平方根
+4、Python 二次方程
+5、Python 计算三角形的面积
+6、Python 随机数生成
+7、Python 摄氏温度转华氏温度
+8、Python 交换变量
+9、Python if 语句
+10、Python 判断字符串是否为数字
+11、Python 判断奇数偶数
+12、Python 判断闰年
+13、Python 获取最大值函数
+14、Python 质数判断
+15、Python 输出指定范围内的素数
+16、Python 阶乘实例
+17、Python 九九乘法表
+18、Python 斐波那契数列
+19、Python 阿姆斯特朗数
+20、Python 十进制转二进制、八进制、十六进制
+21、Python ASCII码与字符相互转换
+22、Python 最大公约数算法
+23、Python 最小公倍数算法
+24、Python 简单计算器实现
+25、Python 生成日历
+26、Python 使用递归斐波那契数列
+27、Python 文件 IO
+28、Python 字符串判断
+29、Python 字符串大小写转换
+30、Python 计算每个月天数
+31、Python 获取昨天日期
+32、Python list 常用操作
