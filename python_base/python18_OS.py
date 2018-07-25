@@ -193,7 +193,7 @@ os.utime(path, times)
 os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])
 输出在文件夹中的文件名通过在树中游走，向上或者向下。
 63	
-os.write(fd, str)
+os.write.txt(fd, str)
 写入字符串到文件描述符 fd中. 返回实际写入的字符串长度
 """
 print("---------------------------TEST")

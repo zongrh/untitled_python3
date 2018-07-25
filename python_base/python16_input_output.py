@@ -11,7 +11,7 @@ Python3 输入和输出
 输出格式美化
 Python两种输出值的方式: 表达式语句和 print() 函数。
 
-第三种方式是使用文件对象的 write() 方法，标准输出文件可以用 sys.stdout 引用。
+第三种方式是使用文件对象的 write.txt() 方法，标准输出文件可以用 sys.stdout 引用。
 
 如果你希望输出的形式更加多样，可以使用 str.format() 函数来格式化输出值。
 
@@ -176,8 +176,8 @@ print("----------------")
 
 # 这个方法很简单, 但是并没有提供一个很好的控制。 因为两者的处理机制不同, 最好不要混用。
 """
-f.write()
-f.write(string) 将 string 写入到文件中, 然后返回写入的字符数。
+f.write.txt()
+f.write.txt(string) 将 string 写入到文件中, 然后返回写入的字符数。
 """
 # 打开一个文件
 f = open("E:\py/python.txt", "w")
@@ -189,7 +189,7 @@ print("----------------")
 # f = open("E:\py/python.txt", "w")
 # value = ("www.baidu.com", 17)
 # s = str(value)
-# f.write()
+# f.write.txt()
 """
 f.tell()
 f.tell() 返回文件对象当前所处的位置, 它是从文件开头开始算起的字节数。

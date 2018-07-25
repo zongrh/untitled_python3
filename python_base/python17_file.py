@@ -53,7 +53,7 @@ file.truncate([size])
 从文件的首行首字符开始截断，截断文件为 size 个字符，无 size 表示从当前位置截断；截断之后后面的所有字符被删除，其中 Widnows 系统下的换行代表2个字符大小。
 
 12	
-file.write(str)
+file.write.txt(str)
 将字符串写入文件，返回的是写入的字符长度。
 
 13	
@@ -140,7 +140,7 @@ print(getfile_fix('runoob.txt'))
 # new_word = input('请输入新的单词或字符：')
 # file_replace(file_name, rep_word, new_word)
 """
-在上面的例子中，write(),read() 方法默认是写入到当前 .py 同文件夹下面的，此外 w+ 的使用方法：不能直接 write() 后，在进行读取，这样试读不到数据的，因为数据对象到达的地方为文件最后，读取是向后读的，因此，会读到空白，应该先把文件对象移到文件首位
+在上面的例子中，write.txt(),read() 方法默认是写入到当前 .py 同文件夹下面的，此外 w+ 的使用方法：不能直接 write.txt() 后，在进行读取，这样试读不到数据的，因为数据对象到达的地方为文件最后，读取是向后读的，因此，会读到空白，应该先把文件对象移到文件首位
 """
 f = open("forwrite.txt", "w+", encoding='utf-8')
 f.write("可以 ，你做的很好！ 6666")  # 此时文件对象在最后一行，如果读取，将读不到数据

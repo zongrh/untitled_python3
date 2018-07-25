@@ -27,7 +27,7 @@ if num == sum:
 else:
     print(num, "不是阿姆斯特朗数")
 print("---------------------------------")
-# Filename ：test.py
+# Filename ：test.txt
 # author by : www.runoob.com
 
 # 获取用户输入数字
